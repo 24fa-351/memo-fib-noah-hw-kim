@@ -62,13 +62,13 @@ unsigned long long int fibWrapper(int seq) {
    return memo[seq];
 }
 
-int isOverflow(unsigned long long int prev, unsigned long long int cur) {
-   // overflow happens when prev + cur > max_int so we have overflow when cur > max_int - prev
-   if (cur > ULLONG_MAX - prev) {
-      return 1;
-   }
-   return 0;
-}
+// int isOverflow(unsigned long long int prev, unsigned long long int cur) {
+//    // overflow happens when prev + cur > max_int so we have overflow when cur > max_int - prev
+//    if (cur > ULLONG_MAX - prev) {
+//       return 1;
+//    }
+//    return 0;
+// }
 
 int main(int argc, char *argv[]) {
    int seq;
