@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <limits.h>
 
 typedef unsigned long long int (*fibFunc)(int);
 unsigned long long int memo[100];
