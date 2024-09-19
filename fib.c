@@ -11,7 +11,7 @@ void initializeCache(fibFunc);
 unsigned long long int fib_i(int);
 unsigned long long int fib_r(int);
 unsigned long long int fibWrapper(int);
-int isOverflow(unsigned long long, unsigned long long);
+int isOverflow(unsigned long long int, unsigned long long int);
 
 void initializeCache(fibFunc chosenFunc) {
    ptr = chosenFunc;
@@ -86,21 +86,25 @@ int main(int argc, char *argv[]) {
 
    unsigned long long int result;
    
-   // nth number starts from 1 not 0
+   
    if (*method == 'r') {
       initializeCache(fib_r);
    } else if (*method == 'i') {
       initializeCache(fib_i);
    }
 
-   result = fibWrapper(seq);
+   // nth number starts from 1 not 0
+   if (seq < 1) {
+      printf("fibonacci index should be positive");
+   } else {
+      result = fibWrapper(seq);
 
-   if (result == ULLONG_MAX) {
-      printf("overflow occured");
+      if (result == ULLONG_MAX) {
+         printf("overflow occured");
+      } else {
+         printf("%llu", result);
+      }
    }
-   else {
-      printf("%llu", result);
-   }
-   
+
    return 0;
 }
