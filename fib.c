@@ -21,8 +21,7 @@ ReturnVal fibWrapper(int);
 // global variables
 fibFunc ptr;
 const int memo_size = 100;
-ReturnVal memo[memo_size];
-
+ReturnVal memo[100];
 
 void initializeCache(fibFunc chosenFunc) {
    ptr = chosenFunc;
