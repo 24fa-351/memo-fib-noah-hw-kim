@@ -31,9 +31,9 @@ ReturnVal memo[100];
 void initializeCache(fibFunc chosenFunc)
 {
    ptr = chosenFunc;
-   for (int i = 0; i < memo_size; i++)
+   for (int idx = 0; idx < memo_size; idx++)
    {
-      memo[i] = (ReturnVal){0, SUCCESS};
+      memo[idx] = (ReturnVal){0, SUCCESS};
    }
 }
 
